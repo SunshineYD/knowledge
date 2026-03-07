@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贵州猴耳天坑三天旅行攻略</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2196f3;
+            margin: 20px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        h3 {
+            color: #42a5f5;
+            margin: 15px 0 10px;
+        }
+
+        .weather-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+
+        .weather-day {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .itinerary {
+            margin: 30px 0;
+        }
+
+        .day-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .time-slot {
+            font-weight: bold;
+            color: #64b5f6;
+        }
+
+        .activity {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container {
+            margin: 30px 0;
+            height: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h4 {
+            margin-bottom: 10px;
+            color: #2196f3;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .practical-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-box {
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .info-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-box li::before {
+            content: "•";
+            color: #2196f3;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            color: #666;
+        }
+
+        /* 打印友好样式 */
+        @media print {
+            body {
+                background-color: #fff;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .map-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>贵州猴耳天坑三天旅行攻略</h1>
+            <p>探索中国西南的地质奇观，体验极限运动的刺激与自然美景的完美融合</p>
+        </header>
+
+        <section class="overview">
+            <h2>行程概览</h2>
+            <p>目的地：贵州省贵阳市开阳县城关镇石头村猴耳天坑</p>
+            <p>出行时间：2026年3月7日 - 2026年3月9日（三天两夜）</p>
+            <p>行程亮点：超级大秋千、地下暗河探险、飞拉达攀岩、喀斯特地貌观光</p>
+        </section>
+
+        <section class="weather">
+            <h2>天气状况</h2>
+            <div class="weather-info">
+                <div class="weather-day">
+                    <h3>3月7日（周六）</h3>
+                    <p>🌧️ 小雨转中雨</p>
+                    <p>温度：7-11℃</p>
+                    <p>南风 1-3级</p>
+                </div>
+                <div class="weather-day">
+                    <h3>3月8日（周日）</h3>
+                    <p>🌧️ 小雨</p>
+                    <p>温度：7-11℃</p>
+                    <p>东北风 1-3级</p>
+                </div>
+                <div class="weather-day">
+                    <h3>3月9日（周一）</h3>
+                    <p>🌧️ 小雨转阴</p>
+                    <p>温度：6-10℃</p>
+                    <p>北风 1-3级</p>
+                </div>
+            </div>
+            <p><strong>注意：</strong>预计行程期间有降雨，建议携带雨具和防滑鞋，部分极限项目可能因天气原因暂停。</p>
+        </section>
+
+        <section class="itinerary">
+            <h2>详细行程规划</h2>
+
+            <div class="day-section">
+                <h3>Day 1：贵阳 → 猴耳天坑（观光体验）</h3>
+                <div class="schedule">
+                    <div class="time-slot">07:30</div>
+                    <div class="activity">
+                        <h4>贵阳出发</h4>
+                        <p>从贵阳市区出发，自驾或包车前往猴耳天坑（约1.5小时车程）</p>
+                    </div>
+                    <div class="time-slot">09:30</div>
+                    <div class="activity">
+                        <h4>抵达景区</h4>
+                        <p>办理入园手续，领取门票（基础门票50元/人）</p>
+                    </div>
+                    <div class="time-slot">10:00</div>
+                    <div class="activity">
+                        <h4>天坑观光</h4>
+                        <p>沿着天坑边缘栈道漫步，俯瞰300米口径的喀斯特漏斗奇观</p>
+                    </div>
+                    <div class="time-slot">12:00</div>
+                    <div class="activity">
+                        <h4>午餐</h4>
+                        <p>景区外农家乐享用当地特色美食（推荐：开阳牛肉粉、酸汤鱼）</p>
+                    </div>
+                    <div class="time-slot">14:00</div>
+                    <div class="activity">
+                        <h4>洞穴探险</h4>
+                        <p>徒步+乘小船探索地下暗河，欣赏钟乳石奇观（船票10元/人）</p>
+                    </div>
+                    <div class="time-slot">16:30</div>
+                    <div class="activity">
+                        <h4>雨瀑绳降</h4>
+                        <p>体验从坑口悬降至底部的刺激（可选项目，单独收费）</p>
+                    </div>
+                    <div class="time-slot">18:00</div>
+                    <div class="activity">
+                        <h4>返回住宿</h4>
+                        <p>前往开阳县城住宿（推荐：开阳县城酒店或民宿，价格150-300元/晚）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <h3>Day 2：猴耳天坑（极限项目体验）</h3>
+                <div class="schedule">
+                    <div class="time-slot">08:30</div>
+                    <div class="activity">
+                        <h4>早餐</h4>
+                        <p>酒店内用餐或在县城品尝当地早餐</p>
+                    </div>
+                    <div class="time-slot">09:30</div>
+                    <div class="activity">
+                        <h4>前往景区</h4>
+                        <p>再次前往猴耳天坑景区</p>
+                    </div>
+                    <div class="time-slot">10:00</div>
+                    <div class="activity">
+                        <h4>超级大秋千</h4>
+                        <p>体验网红超级大秋千（落差92米，398元/人，需提前预约）</p>
+                    </div>
+                    <div class="time-slot">12:00</div>
+                    <div class="activity">
+                        <h4>午餐</h4>
+                        <p>景区内用餐或自带干粮</p>
+                    </div>
+                    <div class="time-slot">14:00</div>
+                    <div class="activity">
+                        <h4>飞拉达攀岩</h4>
+                        <p>挑战悬崖攀岩项目，有专业教练指导（单独收费）</p>
+                    </div>
+                    <div class="time-slot">16:00</div>
+                    <div class="activity">
+                        <h4>丛林穿越</h4>
+                        <p>在原始丛林中通过悬空桥梁、网道等障碍（单独收费）</p>
+                    </div>
+                    <div class="time-slot">18:00</div>
+                    <div class="activity">
+                        <h4>晚餐</h4>
+                        <p>景区内用餐或返回县城</p>
+                    </div>
+                    <div class="time-slot">19:30</div>
+                    <div class="activity">
+                        <h4>夜间灯光秀</h4>
+                        <p>观看天坑夜间灯光秀，感受梦幻氛围（景区内住宿可选露营）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <h3>Day 3：猴耳天坑 → 周边景点 → 返程</h3>
+                <div class="schedule">
+                    <div class="time-slot">08:30</div>
+                    <div class="activity">
+                        <h4>早餐</h4>
+                        <p>酒店内用餐</p>
+                    </div>
+                    <div class="time-slot">09:30</div>
+                    <div class="activity">
+                        <h4>前往南江大峡谷</h4>
+                        <p>驾车前往南江大峡谷（约30分钟车程）</p>
+                    </div>
+                    <div class="time-slot">10:00</div>
+                    <div class="activity">
+                        <h4>南江大峡谷游览</h4>
+                        <p>欣赏峡谷风光，体验漂流等水上项目（可选）</p>
+                    </div>
+                    <div class="time-slot">12:00</div>
+                    <div class="activity">
+                        <h4>午餐</h4>
+                        <p>峡谷内或周边农家乐用餐</p>
+                    </div>
+                    <div class="time-slot">14:00</div>
+                    <div class="activity">
+                        <h4>返程</h4>
+                        <p>返回贵阳市区，结束愉快的三天行程</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <h2>旅游地图</h2>
+            <div class="map-container" id="map"></div>
+        </section>
+
+        <section class="gallery">
+            <h2>景区图片</h2>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=贵州猴耳天坑全景，喀斯特地貌，巨型漏斗，周围植被茂密&image_size=landscape_16_9" alt="猴耳天坑全景">
+                <div class="card-content">
+                    <h4>猴耳天坑全景</h4>
+                    <p>口径300米、深280米的喀斯特漏斗奇观，四周峭壁环绕，底部植被繁茂。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=贵州猴耳天坑超级大秋千，游客在悬崖边准备荡秋千，刺激的极限运动&image_size=landscape_16_9" alt="超级大秋千">
+                <div class="card-content">
+                    <h4>超级大秋千</h4>
+                    <p>垂直落差高达92米的网红项目，体验从悬崖边荡出的刺激感。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=贵州猴耳天坑地下暗河，游客乘船探索洞穴，钟乳石奇观，灯光映照&image_size=landscape_16_9" alt="地下暗河">
+                <div class="card-content">
+                    <h4>地下暗河探险</h4>
+                    <p>乘船深入天坑内的溶洞和暗河，欣赏形态各异的钟乳石。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=贵州猴耳天坑飞拉达攀岩，游客在悬崖上攀爬，专业装备，壮观的景色&image_size=landscape_16_9" alt="飞拉达攀岩">
+                <div class="card-content">
+                    <h4>飞拉达攀岩</h4>
+                    <p>在悬崖上挑战攀岩项目，有专业教练指导，适合喜欢刺激的游客。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=贵州猴耳天坑夜间灯光秀，天坑被彩色灯光照亮，梦幻氛围&image_size=landscape_16_9" alt="夜间灯光秀">
+                <div class="card-content">
+                    <h4>夜间灯光秀</h4>
+                    <p>天坑夜间灯光秀将整个景区装点得如梦如幻，别有一番风味。</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://api.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=南江大峡谷风光，峡谷河流，漂流游客，绿水青山，贵州自然景观&image_size=landscape_16_9" alt="南江大峡谷">
+                <div class="card-content">
+                    <h4>南江大峡谷</h4>
+                    <p>周边著名景点，可欣赏峡谷风光，体验漂流等水上项目。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="practical-info">
+            <h2>实用信息</h2>
+            <div class="info-box">
+                <h3>交通指南</h3>
+                <ul>
+                    <li><strong>自驾：</strong>从贵阳市区出发，全程约1.5小时，景区设有停车场</li>
+                    <li><strong>公共交通：</strong>贵阳北站乘高铁到开阳站（40分钟），再打车9公里到景区</li>
+                    <li><strong>包车：</strong>贵阳包车往返约400-600元/车</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>门票信息</h3>
+                <ul>
+                    <li><strong>基础门票：</strong>50元/人（包含基础观光游览）</li>
+                    <li><strong>超级大秋千：</strong>398元/人</li>
+                    <li><strong>洞穴探险：</strong>船票10元/人</li>
+                    <li><strong>通票：</strong>588元/人（包含多个项目）</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>住宿建议</h3>
+                <ul>
+                    <li><strong>开阳县城：</strong>酒店、民宿选择丰富，价格150-300元/晚</li>
+                    <li><strong>景区露营：</strong>景区提供露营帐篷租赁，体验星空下的天坑</li>
+                    <li><strong>布依族民宿：</strong>景区附近的民族特色民宿，体验当地文化</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>注意事项</h3>
+                <ul>
+                    <li>参与极限项目时严格遵守景区规定，听从教练安排</li>
+                    <li>做好防晒和防蚊措施，携带雨具应对可能的降雨</li>
+                    <li>穿着舒适的运动鞋或登山鞋，洞内温差大请携带薄外套</li>
+                    <li>景区部分项目需提前预约，尤其是节假日期间</li>
+                    <li>环保出行，勿乱扔垃圾，保护喀斯特地貌</li>
+                    <li>携带充电宝、少量干粮，景区内补给有限</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>贵州猴耳天坑三天旅行攻略 | 祝您旅途愉快！</p>
+            <p>更新时间：2026年3月6日</p>
+        </footer>
+    </div>
+
+    <!-- 高德地图 JavaScript API -->
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=your-amap-key"></script>
+    <script>
+        // 初始化地图
+        var map = new AMap.Map('map', {
+            zoom: 12,
+            center: [107.006984, 27.080746], // 猴耳天坑经纬度
+            mapStyle: 'amap://styles/light' // 简约地图风格
+        });
+
+        // 添加猴耳天坑标记
+        var marker1 = new AMap.Marker({
+            position: [107.006984, 27.080746],
+            title: '猴耳天坑',
+            map: map
+        });
+
+        // 添加贵阳标记
+        var marker2 = new AMap.Marker({
+            position: [106.707105, 26.593099],
+            title: '贵阳',
+            map: map
+        });
+
+        // 添加南江大峡谷标记
+        var marker3 = new AMap.Marker({
+            position: [106.998342, 27.133333],
+            title: '南江大峡谷',
+            map: map
+        });
+
+        // 添加路线
+        var polyline = new AMap.Polyline({
+            path: [
+                [106.707105, 26.593099], // 贵阳
+                [107.006984, 27.080746], // 猴耳天坑
+                [106.998342, 27.133333]  // 南江大峡谷
+            ],
+            strokeColor: '#1976d2',
+            strokeWeight: 5,
+            map: map
+        });
+
+        // 添加信息窗口
+        var infoWindow = new AMap.InfoWindow({
+            content: '<h3>猴耳天坑</h3><p>贵州著名的喀斯特地质奇观，集极限运动与自然美景于一体</p>',
+            offset: new AMap.Pixel(0, -30)
+        });
+
+        marker1.on('click', function() {
+            infoWindow.open(map, marker1.getPosition());
+        });
+
+        // 设置地图显示范围
+        map.setFitView([marker1, marker2, marker3]);
+    </script>
+</body>
+</html>
