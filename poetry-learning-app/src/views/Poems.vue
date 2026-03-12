@@ -24,18 +24,20 @@
         >
           <div class="p-4">
             <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-primary">{{ poem.title }}</h3>
+              <h3 class="text-xl font-bold text-primary flex-1 text-center">{{ poem.title }}</h3>
               <span 
-                class="px-3 py-1 rounded-full text-sm font-bold"
+                class="px-3 py-1 rounded-full text-sm font-bold ml-2"
                 :class="poem.completed ? 'bg-success text-white' : 'bg-warning text-white'"
               >
                 {{ poem.completed ? '已打卡' : '未打卡' }}
               </span>
             </div>
             
-            <div class="mb-4">
-              <p class="text-gray-700 mb-2">{{ poem.content }}</p>
-              <p class="text-gray-500 text-sm">{{ poem.pinyin }}</p>
+            <div class="mb-4 text-center">
+              <div v-for="(line, index) in poem.lines" :key="index" class="mb-1">
+                <p class="text-gray-500 text-sm">{{ line.pinyin }}</p>
+                <p class="text-gray-700">{{ line.text }}</p>
+              </div>
             </div>
             
             <div class="mb-4">
@@ -103,24 +105,36 @@ export default {
         {
           id: 1,
           title: '静夜思',
-          content: '床前明月光，疑是地上霜。举头望明月，低头思故乡。',
-          pinyin: 'Chuáng qián míng yuè guāng, yí shì dì shàng shuāng. Jǔ tóu wàng míng yuè, dī tóu sī gù xiāng.',
+          lines: [
+            { text: '床前明月光，', pinyin: 'Chuáng qián míng yuè guāng,' },
+            { text: '疑是地上霜。', pinyin: 'yí shì dì shàng shuāng.' },
+            { text: '举头望明月，', pinyin: 'Jǔ tóu wàng míng yuè,' },
+            { text: '低头思故乡。', pinyin: 'dī tóu sī gù xiāng.' }
+          ],
           completed: true,
           familiarity: 5
         },
         {
           id: 2,
           title: '春晓',
-          content: '春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。',
-          pinyin: 'Chūn mián bù jué xiǎo, chù chù wén tí niǎo. Yè lái fēng yǔ shēng, huā luò zhī duō shǎo.',
+          lines: [
+            { text: '春眠不觉晓，', pinyin: 'Chūn mián bù jué xiǎo,' },
+            { text: '处处闻啼鸟。', pinyin: 'chù chù wén tí niǎo.' },
+            { text: '夜来风雨声，', pinyin: 'Yè lái fēng yǔ shēng,' },
+            { text: '花落知多少。', pinyin: 'huā luò zhī duō shǎo.' }
+          ],
           completed: false,
           familiarity: 3
         },
         {
           id: 3,
           title: '望庐山瀑布',
-          content: '日照香炉生紫烟，遥看瀑布挂前川。飞流直下三千尺，疑是银河落九天。',
-          pinyin: 'Rì zhào xiāng lú shēng zǐ yān, yáo kàn pù bù guà qián chuān. Fēi liú zhí xià sān qiān chǐ, yí shì yín hé luò jiǔ tiān.',
+          lines: [
+            { text: '日照香炉生紫烟，', pinyin: 'Rì zhào xiāng lú shēng zǐ yān,' },
+            { text: '遥看瀑布挂前川。', pinyin: 'yáo kàn pù bù guà qián chuān.' },
+            { text: '飞流直下三千尺，', pinyin: 'Fēi liú zhí xià sān qiān chǐ,' },
+            { text: '疑是银河落九天。', pinyin: 'yí shì yín hé luò jiǔ tiān.' }
+          ],
           completed: false,
           familiarity: 2
         }
