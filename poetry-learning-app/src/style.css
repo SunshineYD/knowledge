@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 卡通风格的按钮样式 */
+.btn-cartoon {
+  @apply px-4 py-2 rounded-full font-bold text-white transition-all transform hover:scale-105 hover:shadow-lg;
+}
+
+/* 卡通风格的卡片样式 */
+.card-cartoon {
+  @apply bg-white rounded-2xl shadow-lg p-4 transition-all transform hover:scale-105 hover:shadow-xl;
+}
+
+/* 适合儿童的动画效果 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
